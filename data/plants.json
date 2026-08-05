@@ -14,31 +14,22 @@
     "location": "Happy Valley Graduation Pavilion",
     "heroImages": [
       {
-        "image": "assets/images/rose-apple-tree.svg",
-        "alt": "Rose Apple tree growing in a landscaped garden",
-        "caption": "Rose Apple tree"
-      },
-      {
-        "image": "assets/images/rose-apple-flower.svg",
-        "alt": "Cream-coloured Rose Apple flowers with long stamens",
-        "caption": "Flowers"
-      },
-      {
-        "image": "assets/images/rose-apple-fruit.svg",
-        "alt": "Pale yellow Rose Apple fruits among green leaves",
-        "caption": "Fruit"
+        "image": "assets/images/1.png",
+        "alt": "Rose Apple tree at Mount Kenya University"
       }
     ],
     "gallery": [
       {
-        "image": "assets/images/rose-apple-flower.svg",
-        "alt": "Cream-coloured Rose Apple flowers with long stamens",
-        "caption": "Flowers"
+        "image": "assets/images/2.png",
+        "alt": "Additional Rose Apple photograph"
       },
       {
-        "image": "assets/images/rose-apple-fruit.svg",
-        "alt": "Pale yellow Rose Apple fruits among green leaves",
-        "caption": "Fruit"
+        "image": "assets/images/3.png",
+        "alt": "Additional Rose Apple photograph"
+      },
+      {
+        "image": "assets/images/4.png",
+        "alt": "Additional Rose Apple photograph"
       }
     ],
     "medicalNote": "These are recorded traditional uses. They are not a recommendation for treating illness and do not replace professional medical care."
