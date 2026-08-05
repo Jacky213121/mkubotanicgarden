@@ -2,18 +2,44 @@
 
 A mobile-first plant information catalogue designed for QR-linked plant labels at the MKU Botanic Garden.
 
-## Current direction
+## Visitor experience
 
-The project no longer depends on videos. Each plant QR code opens a dedicated profile containing:
+Each plant QR code opens a dedicated page containing:
 
 - the MKU identity and official logo
-- a main plant photograph
+- one large plant photograph
+- one continuous plant record below the photograph
 - optional leaf, bark, flower and fruit photographs
 - common, local and botanical names
 - plant family
-- uses and other approved descriptive text
+- uses and approved descriptive text
 - planting date, occasion and location
 - references and academic review details
+
+The plant page intentionally avoids a dashboard of separate information cards. Details are presented as one readable article with headings and subtle dividers.
+
+## Data-driven structure
+
+Plant pages are generated from one reusable template. A new layout is not coded for every plant.
+
+- Plant records: `data/plants.json`
+- Reusable page template: `templates/plant-page.html`
+- Generator: `scripts/build.mjs`
+- Generated pages: `plants/<slug>/index.html`
+
+The homepage plant collection is also generated from the same data.
+
+## Add another plant
+
+1. Add one plant object to `data/plants.json`.
+2. Add the plant photographs under `assets/images/`.
+3. Run:
+
+```bash
+npm run build
+```
+
+The build creates the permanent plant route and updates the homepage catalogue automatically.
 
 ## First example
 
@@ -29,7 +55,7 @@ The current file is a clearly labelled placeholder:
 
 `assets/mku-logo-placeholder.svg`
 
-Replace it with the official MKU logo or update the image path in the homepage and plant-page headers.
+Replace it with the official MKU logo and keep the same filename, or update the logo path in the homepage and plant template.
 
 ## Replace the plant images
 
@@ -38,19 +64,12 @@ The current image files are placeholders:
 - `assets/images/plant-main-placeholder.svg`
 - `assets/images/plant-detail-placeholder.svg`
 
-For production, use compressed WebP or AVIF photographs of the actual MKU specimen. Keep the main image clear and use detail images for leaves, bark, flowers or fruit.
-
-## Add another plant
-
-1. Copy `plants/broad-leafed-croton/` into a new folder.
-2. Rename the folder using a short URL slug, such as `plants/meru-oak/`.
-3. Replace the titles, botanical record, planting information and image paths.
-4. Add the new plant card to `index.html`.
-5. Review all botanical and medicinal claims before publication.
+For production, use compressed WebP or AVIF photographs of the actual MKU specimen. Use one clear main image and optional detail photographs for leaves, bark, flowers or fruit.
 
 ## Local testing
 
 ```bash
+npm run build
 python -m http.server 8080
 ```
 
@@ -58,4 +77,21 @@ Then open `http://localhost:8080`.
 
 ## Deployment
 
-This is a static website and can be deployed directly from GitHub through Cloudflare Pages. It requires no build command and uses the repository root as the output directory.
+The finished output is a static website and does not require backend hosting or a database.
+
+For Cloudflare Pages:
+
+- Build command: `npm run build`
+- Build output directory: repository root
+
+## Publication checks
+
+Before producing a permanent QR code, confirm:
+
+- the official logo
+- the plant photographs
+- spelling and botanical identity
+- medicinal and other use claims
+- references
+- reviewing department or academic reviewer
+- final deployed URL
