@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "broad-leafed-croton",
+    "commonName": "Broad Leafed Croton",
+    "scientificName": "Croton macrostachyus",
+    "localName": "Mutundu (Kik)",
+    "family": "Euphorbiaceae",
+    "uses": "Medicinal - cancer, constipation, diabetes, digestive problems, dysentery, external wounds, fever, hypertension, inflammation, intestinal worms, malaria, pain, ulcers and weight.",
+    "commemoration": "29th Graduation Commemoration Tree",
+    "plantedDate": "7 August 2026",
+    "location": "Happy Valley Graduation Pavilion",
+    "mainImage": "assets/images/plant-main-placeholder.svg",
+    "mainImageAlt": "Placeholder for a photograph of Broad Leafed Croton",
+    "mainImageCaption": "Replace this placeholder with a clear photograph of the Broad Leafed Croton specimen at MKU.",
+    "gallery": [
+      {
+        "image": "assets/images/plant-detail-placeholder.svg",
+        "alt": "Placeholder for a Broad Leafed Croton leaf photograph",
+        "caption": "Leaf"
+      },
+      {
+        "image": "assets/images/plant-detail-placeholder.svg",
+        "alt": "Placeholder for a Broad Leafed Croton bark photograph",
+        "caption": "Bark"
+      },
+      {
+        "image": "assets/images/plant-detail-placeholder.svg",
+        "alt": "Placeholder for a Broad Leafed Croton flower or fruit photograph",
+        "caption": "Flower or fruit"
+      }
+    ],
+    "references": [],
+    "reviewStatus": "The medicinal-use wording reproduces the supplied plant record and requires academic verification and references before public publication."
+  }
+]
