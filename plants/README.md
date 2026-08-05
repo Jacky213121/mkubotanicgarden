@@ -9,4 +9,6 @@ Each plant can use:
 - `heroImages` for the horizontally scrollable images at the top
 - `gallery` for the horizontally scrollable images below the details
 
+The repository root redirects directly to the current plant page; there is no public homepage.
+
 Keep each URL slug stable after printing its QR code, because changing the folder name changes the public address.
