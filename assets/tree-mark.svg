@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">MKU Botanic Garden emblem</title>
+  <desc id="desc">A stylised tree inside a circular frame</desc>
+  <circle cx="120" cy="120" r="112" fill="#eff7ee"/>
+  <path d="M116 178h8v35h-8z" fill="#5c3b24"/>
+  <path d="M120 176c-31 0-56-21-56-48 0-14 7-27 18-36-1-4-2-8-2-12 0-22 18-40 40-40 18 0 34 12 39 29 20 3 35 20 35 41 0 24-20 44-45 44-4 13-15 22-29 22z" fill="#23633b"/>
+  <path d="M120 177V87m0 38-29-25m29 40 34-31m-34 17-23 23m23 7 22 20" fill="none" stroke="#5c3b24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
