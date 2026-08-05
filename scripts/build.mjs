@@ -11,16 +11,21 @@ const requiredFields = [
   'slug',
   'commonName',
   'scientificName',
+  'identificationStatus',
   'localName',
   'family',
-  'uses',
+  'description',
+  'foodUses',
+  'traditionalUses',
+  'otherUses',
   'commemoration',
   'plantedDate',
   'location',
   'mainImage',
   'mainImageAlt',
   'mainImageCaption',
-  'reviewStatus'
+  'identificationNote',
+  'medicalNote'
 ];
 
 const escapeHtml = (value) => String(value)
@@ -58,7 +63,7 @@ for (const plant of plants) {
   const gallerySection = gallery.length > 0
     ? `<section class="record-section" aria-labelledby="gallery-heading">
           <span class="section-kicker">Plant photographs</span>
-          <h2 id="gallery-heading">Image details</h2>
+          <h2 id="gallery-heading">Flower and fruit</h2>
           <div class="gallery-grid">
             ${gallery.map((item) => `<figure><img src="../../${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" loading="lazy"><figcaption>${escapeHtml(item.caption)}</figcaption></figure>`).join('\n            ')}
           </div>
@@ -73,16 +78,21 @@ for (const plant of plants) {
   const tokens = {
     COMMON_NAME: escapeHtml(plant.commonName),
     SCIENTIFIC_NAME: escapeHtml(plant.scientificName),
+    IDENTIFICATION_STATUS: escapeHtml(plant.identificationStatus),
     LOCAL_NAME: escapeHtml(plant.localName),
     FAMILY: escapeHtml(plant.family),
-    USES: escapeHtml(plant.uses),
+    DESCRIPTION: escapeHtml(plant.description),
+    FOOD_USES: escapeHtml(plant.foodUses),
+    TRADITIONAL_USES: escapeHtml(plant.traditionalUses),
+    OTHER_USES: escapeHtml(plant.otherUses),
     COMMEMORATION: escapeHtml(plant.commemoration),
     PLANTED_DATE: escapeHtml(plant.plantedDate),
     LOCATION: escapeHtml(plant.location),
     MAIN_IMAGE: escapeHtml(plant.mainImage),
     MAIN_IMAGE_ALT: escapeHtml(plant.mainImageAlt),
     MAIN_IMAGE_CAPTION: escapeHtml(plant.mainImageCaption),
-    REVIEW_STATUS: escapeHtml(plant.reviewStatus),
+    IDENTIFICATION_NOTE: escapeHtml(plant.identificationNote),
+    MEDICAL_NOTE: escapeHtml(plant.medicalNote),
     GALLERY_SECTION: gallerySection,
     REFERENCES_CONTENT: referencesContent
   };
