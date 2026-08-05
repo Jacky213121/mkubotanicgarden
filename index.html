@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover the living stories of trees at the MKU Botanic Garden.">
+  <meta name="description" content="Explore verified plant profiles from the MKU Botanic Garden.">
   <title>MKU Botanic Garden</title>
   <link rel="icon" href="assets/tree-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="MKU Botanic Garden home">
-        <img src="assets/tree-mark.svg" alt="">
-        <span>MKU Botanic Garden</span>
+        <img src="assets/mku-logo-placeholder.svg" alt="MKU logo placeholder">
+        <span>
+          <strong>MKU Botanic Garden</strong>
+          <small>Plant information catalogue</small>
+        </span>
       </a>
-      <a class="header-link" href="#trees">Explore trees</a>
+      <a class="header-link" href="#plants">Browse plants</a>
     </div>
   </header>
 
@@ -24,61 +28,79 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Scan · Watch · Discover</div>
-          <h1>Every tree has a story.</h1>
-          <p>Scan a tree’s QR code to meet it through a short video, then explore its scientific identity, ecological role and place in culture.</p>
+          <div class="eyebrow">Scan · Identify · Learn</div>
+          <h1>Discover the plants of MKU Botanic Garden.</h1>
+          <p>Each QR code opens a mobile-friendly plant profile with the MKU identity, plant photographs, botanical information, uses, planting records and references.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="trees/mugumo/">Meet the Mugumo tree</a>
+            <a class="button button-primary" href="plants/broad-leafed-croton/">View the first plant profile</a>
             <a class="button button-secondary" href="#how-it-works">How it works</a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="assets/tree-mark.svg" alt="">
+
+        <div class="hero-art" aria-label="Plant catalogue preview">
+          <div class="hero-image-placeholder">
+            <img src="assets/images/plant-main-placeholder.svg" alt="Placeholder for a plant photograph">
+          </div>
           <div class="scan-card">
-            <strong>Designed for a phone-first visit</strong>
-            <span>The video appears directly on each tree’s landing page.</span>
+            <strong>Designed for QR-code visitors</strong>
+            <span>Plant identity, images and text appear on one clear landing page.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="trees">
+    <section class="section" id="plants">
       <div class="container">
         <div class="section-heading">
-          <h2>Start exploring</h2>
-          <p>The collection begins with one tree and grows through a reusable page structure. Each QR code leads to one permanent tree address.</p>
+          <div>
+            <span class="section-kicker">Plant collection</span>
+            <h2>Start exploring</h2>
+          </div>
+          <p>The catalogue begins with the Broad Leafed Croton. Additional plant pages can be added using the same consistent structure.</p>
         </div>
-        <div class="tree-grid">
-          <a class="tree-card tree-card-featured" href="trees/mugumo/">
-            <span>Tree 001</span>
-            <h3>Mugumo</h3>
-            <p class="latin">Scientific identity to be verified</p>
-            <p class="meta">Video landing page ready</p>
+
+        <div class="plant-grid">
+          <a class="plant-card plant-card-featured" href="plants/broad-leafed-croton/">
+            <div class="plant-card-image">
+              <img src="assets/images/plant-main-placeholder.svg" alt="Plant photograph placeholder for Broad Leafed Croton">
+            </div>
+            <div class="plant-card-copy">
+              <span>Featured plant</span>
+              <h3>Broad Leafed Croton</h3>
+              <p class="latin">Croton macrostachyus</p>
+              <p class="meta">Mutundu (Kik) · Euphorbiaceae</p>
+            </div>
           </a>
-          <article class="tree-card placeholder-card">
-            <span>Tree 002</span>
-            <h3>Next tree</h3>
-            <p>Add the next species using the same template.</p>
+
+          <article class="plant-card placeholder-card">
+            <span>Next profile</span>
+            <h3>Another plant</h3>
+            <p>Use the same page template for every new plant added to the garden catalogue.</p>
           </article>
-          <article class="tree-card placeholder-card">
-            <span>Tree 003</span>
-            <h3>Next tree</h3>
-            <p>The collection can grow without redesigning the website.</p>
+
+          <article class="plant-card placeholder-card">
+            <span>Future feature</span>
+            <h3>Search and filter</h3>
+            <p>The catalogue can later support searching by common name, botanical name, family or local name.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how-it-works">
+    <section class="section section-soft" id="how-it-works">
       <div class="container">
         <div class="section-heading">
-          <h2>How the experience works</h2>
-          <p>A visitor scans the physical label, lands on the exact tree page and taps the embedded YouTube video. Supporting information remains available below.</p>
+          <div>
+            <span class="section-kicker">Visitor journey</span>
+            <h2>One scan, one complete profile</h2>
+          </div>
+          <p>The QR code points to a permanent plant page. Updating the text or replacing an image does not require replacing the QR code.</p>
         </div>
-        <div class="tree-grid">
-          <article class="tree-card"><span>01</span><h3>Scan</h3><p>Each tree has a permanent QR code linked to its own page.</p></article>
-          <article class="tree-card"><span>02</span><h3>Watch</h3><p>The YouTube-hosted video plays inside the landing page.</p></article>
-          <article class="tree-card"><span>03</span><h3>Discover</h3><p>Names, ecology, culture, location and references sit below the video.</p></article>
+
+        <div class="steps-grid">
+          <article class="step-card"><span>01</span><h3>Scan</h3><p>A visitor scans the QR code attached to the plant label.</p></article>
+          <article class="step-card"><span>02</span><h3>View</h3><p>The MKU logo, plant name and main image appear immediately.</p></article>
+          <article class="step-card"><span>03</span><h3>Learn</h3><p>The visitor reads the plant record, uses, planting history and references.</p></article>
         </div>
       </div>
     </section>
@@ -86,10 +108,11 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>MKU Botanic Garden — working prototype</span>
+      <span>MKU Botanic Garden</span>
       <span>© <span data-current-year></span> MKU Botanic Garden</span>
     </div>
   </footer>
+
   <script src="assets/app.js"></script>
 </body>
 </html>
