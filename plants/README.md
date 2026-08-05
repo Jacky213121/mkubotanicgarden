@@ -1,11 +1,5 @@
-# Generated plant pages
+# Plant pages
 
-Do not manually design a separate layout in this folder for each plant.
+Plant pages in this directory are generated from `data/plants.json` using the shared template in `templates/plant-page.html`.
 
-Add or edit plant records in `data/plants.json`, then run:
-
-```bash
-npm run build
-```
-
-The generator uses `templates/plant-page.html` to create the permanent pages in this folder. Keep each slug stable after printing its QR code because the slug forms the permanent public address.
+The current first profile is `rose-apple`. Keep every plant URL slug stable after its QR code is printed, because changing the slug changes the public address.
