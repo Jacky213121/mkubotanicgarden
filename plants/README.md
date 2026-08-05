@@ -1,5 +1,11 @@
-# Plant pages
+# Generated plant pages
 
-Each folder in this directory represents one permanent plant landing page for a QR code.
+Do not manually design a separate layout in this folder for each plant.
 
-Use `broad-leafed-croton` as the current reference layout. Keep the URL slug stable after printing a QR code, because changing the folder name changes the public address.
+Add or edit plant records in `data/plants.json`, then run:
+
+```bash
+npm run build
+```
+
+The generator uses `templates/plant-page.html` to create the permanent pages in this folder. Keep each slug stable after printing its QR code because the slug forms the permanent public address.
