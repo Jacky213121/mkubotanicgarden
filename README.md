@@ -6,13 +6,13 @@ A mobile-first plant information catalogue designed for QR-linked plant labels a
 
 Each plant QR code opens a dedicated page containing:
 
-- the MKU identity and official logo
+- the Mount Kenya University identity and official logo
 - one large plant photograph
 - one continuous plant record below the photograph
 - optional leaf, bark, flower and fruit photographs
 - common, local and botanical names
 - plant family
-- uses and approved descriptive text
+- food, traditional and other uses
 - planting date, occasion and location
 - references and academic review details
 
@@ -27,7 +27,7 @@ Plant pages are generated from one reusable template. A new layout is not coded 
 - Generator: `scripts/build.mjs`
 - Generated pages: `plants/<slug>/index.html`
 
-The homepage plant collection is also generated from the same data.
+The homepage plant collection is generated from the same data.
 
 ## Add another plant
 
@@ -41,30 +41,26 @@ npm run build
 
 The build creates the permanent plant route and updates the homepage catalogue automatically.
 
-## First example
+## First plant profile
 
 The first implemented profile is:
 
-`/plants/broad-leafed-croton/`
+`/plants/rose-apple/`
 
-It uses the supplied Broad Leafed Croton record and visibly flags the medicinal claims for academic review before public release.
+It contains the supplied Rose Apple record, the official MKU logo and the supplied tree, flower and fruit photographs.
 
-## Replace the logo
+The supplied record named the species as `Syzygium guineense`. The photographs are more consistent with `Syzygium jambos`, the species widely known as rose apple. The public page therefore labels the identification as provisional until an MKU botanist confirms the specimen and local name.
 
-The current file is a clearly labelled placeholder:
+## Image assets
 
-`assets/mku-logo-placeholder.svg`
+Current Rose Apple assets:
 
-Replace it with the official MKU logo and keep the same filename, or update the logo path in the homepage and plant template.
+- `assets/images/rose-apple-tree.svg`
+- `assets/images/rose-apple-flower.svg`
+- `assets/images/rose-apple-fruit.svg`
+- `assets/mku-logo.svg`
 
-## Replace the plant images
-
-The current image files are placeholders:
-
-- `assets/images/plant-main-placeholder.svg`
-- `assets/images/plant-detail-placeholder.svg`
-
-For production, use compressed WebP or AVIF photographs of the actual MKU specimen. Use one clear main image and optional detail photographs for leaves, bark, flowers or fruit.
+These are web-optimised versions of the supplied files. Higher-resolution production images can replace them later without changing the page address or QR code.
 
 ## Local testing
 
@@ -88,10 +84,7 @@ For Cloudflare Pages:
 
 Before producing a permanent QR code, confirm:
 
-- the official logo
-- the plant photographs
-- spelling and botanical identity
-- medicinal and other use claims
-- references
-- reviewing department or academic reviewer
+- botanical identity and local name
+- wording of traditional uses
+- references and academic reviewer
 - final deployed URL
