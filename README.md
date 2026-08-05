@@ -1,68 +1,61 @@
-# MKU Botanic Garden — MVP
+# MKU Botanic Garden
 
-A mobile-first static website prototype for QR-linked tree videos at the MKU Botanic Garden.
+A mobile-first plant information catalogue designed for QR-linked plant labels at the MKU Botanic Garden.
 
-## What already works
+## Current direction
 
-- Project homepage
-- Permanent-style tree route: `/trees/mugumo/`
-- Embedded YouTube player mechanism
-- Responsive mobile layout
-- Reusable visual structure for additional trees
-- Accessible headings, navigation and video title
-- Privacy-enhanced YouTube embed using `youtube-nocookie.com`
+The project no longer depends on videos. Each plant QR code opens a dedicated profile containing:
 
-## Add the Mugumo video
+- the MKU identity and official logo
+- a main plant photograph
+- optional leaf, bark, flower and fruit photographs
+- common, local and botanical names
+- plant family
+- uses and other approved descriptive text
+- planting date, occasion and location
+- references and academic review details
 
-1. Upload the completed video to YouTube.
-2. Copy the video ID. For `https://youtu.be/AbCd1234`, the ID is `AbCd1234`.
-3. Open `trees/mugumo/index.html`.
-4. Replace:
+## First example
 
-   `data-youtube-id="VIDEO_ID_HERE"`
+The first implemented profile is:
 
-   with:
+`/plants/broad-leafed-croton/`
 
-   `data-youtube-id="AbCd1234"`
+It uses the supplied Broad Leafed Croton record and visibly flags the medicinal claims for academic review before public release.
 
-The placeholder automatically becomes an embedded video player.
+## Replace the logo
 
-## Add another tree
+The current file is a clearly labelled placeholder:
 
-1. Copy the entire `trees/mugumo` folder.
-2. Rename it using a short URL slug, for example `trees/croton`.
-3. Replace the title, names, facts, description and YouTube ID.
-4. Add its card to `index.html`.
+`assets/mku-logo-placeholder.svg`
 
-## Test locally
+Replace it with the official MKU logo or update the image path in the homepage and plant-page headers.
 
-From this folder, run one of these commands:
+## Replace the plant images
+
+The current image files are placeholders:
+
+- `assets/images/plant-main-placeholder.svg`
+- `assets/images/plant-detail-placeholder.svg`
+
+For production, use compressed WebP or AVIF photographs of the actual MKU specimen. Keep the main image clear and use detail images for leaves, bark, flowers or fruit.
+
+## Add another plant
+
+1. Copy `plants/broad-leafed-croton/` into a new folder.
+2. Rename the folder using a short URL slug, such as `plants/meru-oak/`.
+3. Replace the titles, botanical record, planting information and image paths.
+4. Add the new plant card to `index.html`.
+5. Review all botanical and medicinal claims before publication.
+
+## Local testing
 
 ```bash
 python -m http.server 8080
 ```
 
-or:
-
-```bash
-npx serve .
-```
-
 Then open `http://localhost:8080`.
 
-## Deploy to Cloudflare Pages
+## Deployment
 
-The site requires no build command. Upload the folder or connect its GitHub repository and set the output directory to the project root.
-
-## Important publishing check
-
-“Mugumo” can refer to culturally significant fig trees, but the exact scientific identity of the specimen must be confirmed from the garden’s records or a botanist. The prototype therefore leaves the scientific name unasserted.
-
-## Planned next phase
-
-- Replace placeholder content with verified Mugumo information
-- Add the finished video
-- Create a QR code linked to the deployed Mugumo URL
-- Add scan analytics
-- Introduce a protected content-management dashboard
-- Add search, garden map and multilingual content
+This is a static website and can be deployed directly from GitHub through Cloudflare Pages. It requires no build command and uses the repository root as the output directory.
