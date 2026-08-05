@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{COMMON_NAME}} plant profile at the MKU Botanic Garden.">
+  <meta name="description" content="Learn about {{COMMON_NAME}} at the MKU Botanic Garden.">
   <title>{{COMMON_NAME}} | MKU Botanic Garden</title>
   <link rel="icon" href="../../assets/tree-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -31,27 +31,21 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> / {{COMMON_NAME}}</nav>
         <div class="plant-title-row">
           <div>
-            <div class="eyebrow">Plant profile</div>
             <h1>{{COMMON_NAME}}</h1>
             <p class="plant-subtitle"><em>{{SCIENTIFIC_NAME}}</em></p>
             <p class="local-name">{{LOCAL_NAME}}</p>
-            <p class="identification-status">{{IDENTIFICATION_STATUS}}</p>
           </div>
           <span class="family-badge">{{FAMILY}}</span>
         </div>
 
-        <figure class="main-image-card">
-          <img src="../../{{MAIN_IMAGE}}" alt="{{MAIN_IMAGE_ALT}}">
-          <figcaption>{{MAIN_IMAGE_CAPTION}}</figcaption>
-        </figure>
+        {{HERO_GALLERY}}
       </div>
     </section>
 
     <section class="container plant-page-width plant-reading-area">
       <article class="plant-record">
-        <section class="record-section record-section-first" aria-labelledby="identity-heading">
-          <span class="section-kicker">Plant identity</span>
-          <h2 id="identity-heading">About this plant</h2>
+        <section class="record-section record-section-first" aria-labelledby="about-heading">
+          <h2 id="about-heading">About this plant</h2>
           <p>{{DESCRIPTION}}</p>
           <dl class="record-list">
             <div><dt>Common name</dt><dd>{{COMMON_NAME}}</dd></div>
@@ -62,8 +56,7 @@
         </section>
 
         <section class="record-section" aria-labelledby="uses-heading">
-          <span class="section-kicker">Uses and significance</span>
-          <h2 id="uses-heading">How the plant is used</h2>
+          <h2 id="uses-heading">Uses</h2>
           <div class="use-group">
             <h3>Food</h3>
             <p>{{FOOD_USES}}</p>
@@ -80,19 +73,11 @@
         </section>
 
         <section class="record-section" aria-labelledby="planting-heading">
-          <span class="section-kicker">Commemorative record</span>
           <h2 id="planting-heading">Planting details</h2>
           <p><strong>{{COMMEMORATION}}.</strong> Planted on {{PLANTED_DATE}} at {{LOCATION}}.</p>
         </section>
 
         {{GALLERY_SECTION}}
-
-        <section class="record-section" aria-labelledby="references-heading">
-          <span class="section-kicker">Academic record</span>
-          <h2 id="references-heading">Identification and sources</h2>
-          <div class="review-note"><strong>Botanical identification:</strong> {{IDENTIFICATION_NOTE}}</div>
-          {{REFERENCES_CONTENT}}
-        </section>
       </article>
     </section>
   </main>
