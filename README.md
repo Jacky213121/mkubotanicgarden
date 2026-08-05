@@ -7,16 +7,13 @@ A mobile-first plant information catalogue designed for QR-linked plant labels a
 Each plant QR code opens a dedicated page containing:
 
 - the Mount Kenya University identity and official logo
-- one large plant photograph
-- one continuous plant record below the photograph
-- optional leaf, bark, flower and fruit photographs
+- a horizontally scrollable image area at the top
+- one continuous plant record below the images
+- an optional horizontally scrollable image gallery
 - common, local and botanical names
 - plant family
 - food, traditional and other uses
 - planting date, occasion and location
-- references and academic review details
-
-The plant page intentionally avoids a dashboard of separate information cards. Details are presented as one readable article with headings and subtle dividers.
 
 ## Data-driven structure
 
@@ -27,7 +24,7 @@ Plant pages are generated from one reusable template. A new layout is not coded 
 - Generator: `scripts/build.mjs`
 - Generated pages: `plants/<slug>/index.html`
 
-The homepage plant collection is generated from the same data.
+The homepage catalogue is generated from the same data.
 
 ## Add another plant
 
@@ -39,17 +36,20 @@ The homepage plant collection is generated from the same data.
 npm run build
 ```
 
-The build creates the permanent plant route and updates the homepage catalogue automatically.
+The build creates the permanent plant route and updates the homepage automatically.
 
-## First plant profile
+## Rose Apple
 
-The first implemented profile is:
+The first completed page is:
 
 `/plants/rose-apple/`
 
-It contains the supplied Rose Apple record, the official MKU logo and the supplied tree, flower and fruit photographs.
+Its images are managed in two arrays inside `data/plants.json`:
 
-The supplied record named the species as `Syzygium guineense`. The photographs are more consistent with `Syzygium jambos`, the species widely known as rose apple. The public page therefore labels the identification as provisional until an MKU botanist confirms the specimen and local name.
+- `heroImages`: the horizontally scrollable images at the top
+- `gallery`: the horizontally scrollable images below the plant details
+
+The first item in `heroImages` is also used on the homepage card.
 
 ## Image assets
 
@@ -59,8 +59,6 @@ Current Rose Apple assets:
 - `assets/images/rose-apple-flower.svg`
 - `assets/images/rose-apple-fruit.svg`
 - `assets/mku-logo.svg`
-
-These are web-optimised versions of the supplied files. Higher-resolution production images can replace them later without changing the page address or QR code.
 
 ## Local testing
 
@@ -86,5 +84,5 @@ Before producing a permanent QR code, confirm:
 
 - botanical identity and local name
 - wording of traditional uses
-- references and academic reviewer
+- final photographs
 - final deployed URL
