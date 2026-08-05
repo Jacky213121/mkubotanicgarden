@@ -5,7 +5,6 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataPath = path.join(root, 'data', 'plants.json');
 const templatePath = path.join(root, 'templates', 'plant-page.html');
-const homePath = path.join(root, 'index.html');
 
 const requiredFields = [
   'slug',
@@ -123,33 +122,5 @@ for (const plant of plants) {
   await mkdir(outputDirectory, { recursive: true });
   await writeFile(path.join(outputDirectory, 'index.html'), page, 'utf8');
 }
-
-const cards = plants.map((plant) => {
-  const firstImage = plant.heroImages[0];
-
-  return `          <a class="plant-card plant-card-featured" href="plants/${escapeHtml(plant.slug)}/">
-            <div class="plant-card-image">
-              <img src="${escapeHtml(firstImage.image)}" alt="${escapeHtml(firstImage.alt)}" loading="lazy">
-            </div>
-            <div class="plant-card-copy">
-              <h3>${escapeHtml(plant.commonName)}</h3>
-              <p class="latin"><em>${escapeHtml(plant.scientificName)}</em></p>
-              <p class="meta">${escapeHtml(plant.localName)} · ${escapeHtml(plant.family)}</p>
-            </div>
-          </a>`;
-}).join('\n');
-
-let homepage = await readFile(homePath, 'utf8');
-const startMarker = '<!-- PLANT_CARDS_START -->';
-const endMarker = '<!-- PLANT_CARDS_END -->';
-const start = homepage.indexOf(startMarker);
-const end = homepage.indexOf(endMarker);
-
-if (start === -1 || end === -1 || end < start) {
-  throw new Error('index.html is missing the plant card build markers.');
-}
-
-homepage = `${homepage.slice(0, start + startMarker.length)}\n${cards}\n        ${homepage.slice(end)}`;
-await writeFile(homePath, homepage, 'utf8');
 
 console.log(`Generated ${plants.length} plant page${plants.length === 1 ? '' : 's'}.`);
