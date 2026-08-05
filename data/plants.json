@@ -2,20 +2,33 @@
   {
     "slug": "rose-apple",
     "commonName": "Rose Apple",
-    "scientificName": "Syzygium jambos",
-    "identificationStatus": "Provisional identification",
+    "scientificName": "Syzygium guineense",
     "localName": "Zambarau (Kikuyu)",
     "family": "Myrtaceae",
-    "description": "Rose Apple is an evergreen fruit tree valued for its fragrant edible fruits, dense foliage and usefulness in gardens, farms and conservation landscapes.",
+    "description": "Rose Apple is an evergreen fruit tree valued for its edible fruits, dense foliage and usefulness in gardens, farms and conservation landscapes.",
     "foodUses": "The fruits are eaten fresh and may also be processed into beverages and vinegar.",
     "traditionalUses": "The bark and leaves have been used in traditional preparations for diarrhoea, malaria and abdominal pain.",
     "otherUses": "The wood may be used for timber and fuel, while the tree can contribute to agroforestry, shade and environmental conservation.",
     "commemoration": "Mount Kenya University 29th Graduation Commemoration Tree",
     "plantedDate": "7 August 2026",
     "location": "Happy Valley Graduation Pavilion",
-    "mainImage": "assets/images/rose-apple-tree.svg",
-    "mainImageAlt": "Rose Apple tree growing in a landscaped garden",
-    "mainImageCaption": "Rose Apple tree in a landscaped garden.",
+    "heroImages": [
+      {
+        "image": "assets/images/rose-apple-tree.svg",
+        "alt": "Rose Apple tree growing in a landscaped garden",
+        "caption": "Rose Apple tree"
+      },
+      {
+        "image": "assets/images/rose-apple-flower.svg",
+        "alt": "Cream-coloured Rose Apple flowers with long stamens",
+        "caption": "Flowers"
+      },
+      {
+        "image": "assets/images/rose-apple-fruit.svg",
+        "alt": "Pale yellow Rose Apple fruits among green leaves",
+        "caption": "Fruit"
+      }
+    ],
     "gallery": [
       {
         "image": "assets/images/rose-apple-flower.svg",
@@ -28,11 +41,6 @@
         "caption": "Fruit"
       }
     ],
-    "references": [
-      "Mount Kenya University commemorative tree record supplied for the project.",
-      "Royal Botanic Gardens, Kew. Plants of the World Online: Syzygium jambos (L.) Alston."
-    ],
-    "identificationNote": "The supplied record named Syzygium guineense, but the supplied flower and fruit photographs are more consistent with Syzygium jambos (rose apple). The specimen and local name should be confirmed by an MKU botanist before final publication.",
     "medicalNote": "These are recorded traditional uses. They are not a recommendation for treating illness and do not replace professional medical care."
   }
 ]
