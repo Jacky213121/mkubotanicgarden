@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about {{COMMON_NAME}} at Mount Kenya University.">
+  <title>{{COMMON_NAME}} | Mount Kenya University</title>
+  <link rel="icon" href="../../assets/tree-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/catalogue.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Mount Kenya University">
+        <img src="../../assets/mku-logo.svg" alt="Mount Kenya University logo">
+        <span>
+          <strong>Mount Kenya University</strong>
+          <small>Plant information catalogue</small>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="plant-hero">
+      <div class="container plant-page-width">
+        <div class="plant-title-row">
+          <div>
+            <h1>{{COMMON_NAME}}</h1>
+            <p class="plant-subtitle"><em>{{SCIENTIFIC_NAME}}</em></p>
+            <p class="local-name">{{LOCAL_NAME}}</p>
+          </div>
+          <span class="family-badge">{{FAMILY}}</span>
+        </div>
+
+        {{HERO_GALLERY}}
+      </div>
+    </section>
+
+    <section class="container plant-page-width plant-reading-area">
+      <article class="plant-record">
+        <section class="record-section record-section-first" aria-labelledby="about-heading">
+          <h2 id="about-heading">About this plant</h2>
+          <p>{{DESCRIPTION}}</p>
+          <dl class="record-list">
+            <div><dt>Common name</dt><dd>{{COMMON_NAME}}</dd></div>
+            <div><dt>Local name</dt><dd>{{LOCAL_NAME}}</dd></div>
+            <div><dt>Botanical name</dt><dd><em>{{SCIENTIFIC_NAME}}</em></dd></div>
+            <div><dt>Family</dt><dd>{{FAMILY}}</dd></div>
+          </dl>
+        </section>
+
+        <section class="record-section" aria-labelledby="uses-heading">
+          <h2 id="uses-heading">Uses</h2>
+          <div class="use-group">
+            <h3>Food</h3>
+            <p>{{FOOD_USES}}</p>
+          </div>
+          <div class="use-group">
+            <h3>Traditional knowledge</h3>
+            <p>{{TRADITIONAL_USES}}</p>
+          </div>
+          <div class="review-note"><strong>Health information:</strong> {{MEDICAL_NOTE}}</div>
+          <div class="use-group">
+            <h3>Other uses</h3>
+            <p>{{OTHER_USES}}</p>
+          </div>
+        </section>
+
+        <section class="record-section" aria-labelledby="planting-heading">
+          <h2 id="planting-heading">Planting details</h2>
+          <p><strong>{{COMMEMORATION}}.</strong> Planted on {{PLANTED_DATE}} at {{LOCATION}}.</p>
+        </section>
+
+        {{GALLERY_SECTION}}
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Mount Kenya University</span>
+      <span>© <span data-current-year></span> Mount Kenya University</span>
+    </div>
+  </footer>
+
+  <script src="../../assets/app.js"></script>
+</body>
+</html>

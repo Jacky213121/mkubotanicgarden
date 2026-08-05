@@ -1,0 +1,32 @@
+name: Validate plant catalogue
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - agent/image-text-plant-catalogue
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check generator syntax
+        run: node --check scripts/build.mjs
+
+      - name: Generate catalogue
+        run: npm run build
+
+      - name: Confirm generated files are committed
+        run: git diff --exit-code -- index.html plants/

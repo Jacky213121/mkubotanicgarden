@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "rose-apple",
+    "commonName": "Rose Apple",
+    "scientificName": "Syzygium guineense",
+    "localName": "Zambarau (Kikuyu)",
+    "family": "Myrtaceae",
+    "description": "Rose Apple is an evergreen fruit tree valued for its edible fruits, dense foliage and usefulness in gardens, farms and conservation landscapes.",
+    "foodUses": "The fruits are eaten fresh and may also be processed into beverages and vinegar.",
+    "traditionalUses": "The bark and leaves have been used in traditional preparations for diarrhoea, malaria and abdominal pain.",
+    "otherUses": "The wood may be used for timber and fuel, while the tree can contribute to agroforestry, shade and environmental conservation.",
+    "commemoration": "Mount Kenya University 29th Graduation Commemoration Tree",
+    "plantedDate": "7 August 2026",
+    "location": "Happy Valley Graduation Pavilion",
+    "heroImages": [
+      {
+        "image": "assets/images/1.png",
+        "alt": "Rose Apple tree at Mount Kenya University"
+      }
+    ],
+    "gallery": [
+      {
+        "image": "assets/images/2.png",
+        "alt": "Additional Rose Apple photograph"
+      },
+      {
+        "image": "assets/images/3.png",
+        "alt": "Additional Rose Apple photograph"
+      },
+      {
+        "image": "assets/images/4.png",
+        "alt": "Additional Rose Apple photograph"
+      }
+    ],
+    "medicalNote": "These are recorded traditional uses. They are not a recommendation for treating illness and do not replace professional medical care."
+  }
+]
