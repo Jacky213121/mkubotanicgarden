@@ -1,21 +1,53 @@
-.identification-status {
-  display: inline-flex;
-  margin: 14px 0 0;
-  padding: 7px 11px;
-  border: 1px solid var(--warning-line);
-  border-radius: 999px;
-  background: var(--warning-bg);
-  color: #6a5519;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
+.hero-image-scroller,
+.gallery-scroller {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--forest-700) var(--forest-100);
+  scrollbar-width: thin;
 }
 
-.main-image-card img {
-  aspect-ratio: auto;
-  max-height: 720px;
+.hero-image-scroller {
+  gap: 16px;
+  margin-top: 30px;
+  padding: 0 0 14px;
+}
+
+.hero-image-slide {
+  flex: 0 0 min(94%, 840px);
+  margin: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.hero-image-slide img {
+  width: 100%;
+  height: clamp(360px, 66vw, 680px);
   object-fit: contain;
   background: var(--forest-50);
+}
+
+.hero-image-slide figcaption {
+  min-height: 48px;
+  padding: 13px 18px 15px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.plant-reading-area {
+  padding-top: 24px;
+}
+
+.plant-record {
+  border-radius: 28px;
 }
 
 .use-group + .use-group {
@@ -38,27 +70,48 @@
   margin-top: 28px;
 }
 
-.gallery-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.gallery-scroller {
+  gap: 14px;
+  margin-top: 26px;
+  padding: 0 0 14px;
 }
 
-.gallery-grid img {
+.gallery-slide {
+  flex: 0 0 clamp(250px, 48vw, 420px);
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.gallery-slide img {
+  width: 100%;
   height: 360px;
-  aspect-ratio: auto;
   object-fit: contain;
+  border-radius: 16px;
+  background: var(--forest-50);
 }
 
-.reference-list {
-  margin: 26px 0 0;
+.gallery-slide figcaption {
+  padding: 10px 2px 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 @media (max-width: 620px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .hero-image-slide {
+    flex-basis: 90%;
+    border-radius: 20px;
   }
 
-  .gallery-grid img {
-    height: auto;
-    max-height: 520px;
+  .hero-image-slide img {
+    height: min(72vh, 520px);
+  }
+
+  .gallery-slide {
+    flex-basis: 84%;
+  }
+
+  .gallery-slide img {
+    height: min(64vh, 460px);
   }
 }
